@@ -9,8 +9,8 @@
 screens_connected=$(xrandr | grep -cw connected)
 
 if [[ $screens_connected -eq 3 ]]; then
-  sh /home/darren/.bash_scripts/3screen.sh
-  echo "3 screens scripts has been executed"
+  sh "$HOME/.bash_scripts/3screen.sh"
 else
-  echo "3 screens scripts not executed. Laptop only mode"
+  sh $HOME/.bash_scripts/random_wallpaper_colorscheme.sh
+  #sh "$HOME/.bash_scripts/laptop_only.sh"
 fi
