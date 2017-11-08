@@ -10,7 +10,9 @@ screens_connected=$(xrandr | grep -cw connected)
 
 if [[ $screens_connected -eq 3 ]]; then
   sh "$HOME/.bash_scripts/3screen.sh"
+elif [[ $screens_connected -eq 2 ]]; then
+  sh "$HOME/.bash_scripts/2screen.sh"
 else
-  #sh $HOME/.bash_scripts/random_wallpaper_colorscheme.sh
   sh "$HOME/.bash_scripts/laptop_only.sh"
 fi
+
