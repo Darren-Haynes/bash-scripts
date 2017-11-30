@@ -2,7 +2,7 @@
 
 # Make 1 monitors with laptop happen
 xrandr --output eDP1 --primary --mode 2880x1620             --pos 3840x270 --rotate normal \
-       --output VGA1           --mode 1920x1080 --scale 2x2 --pos 0x0 --rotate normal
+       --output VGA1           --mode 1024x768 --scale 2x2 --pos 0x0 --rotate normal
 
 # set font size for xresources (URxvt) and termite
 sed -i 's/font = NotoMono 12/font = NotoMono 14/' "$HOME/dotfiles/termite_config"

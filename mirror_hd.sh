@@ -1,11 +1,13 @@
 #!/bin/sh
 
 # Make 1 monitors with laptop happen
-xrandr --output eDP1 --primary --mode 1920x1080  --pos 0x0 --rotate normal \
-       --output HDMI1           --mode 1920x1080 --scale 1x1 --pos 0x0 --rotate normal
+#xrandr --output eDP1 --primary --mode 1920x1080  --pos 0x0 --rotate normal \
+       #--output HDMI1           --mode 1920x1080 --scale 1x1 --pos 0x0 --rotate normal
 
+xrandr --output eDP1 --primary --mode 2880x1620  --pos 0x0 --rotate normal \
+       --output HDMI1           --mode 1920x1080 --scale 1.5x1.5 --pos 0x0 --rotate normal
 # set font size for xresources (URxvt) and termite
-sed -i 's/font = NotoMono 12/font = NotoMono 14/' "$HOME/dotfiles/termite_config"
+#sed -i 's/font = NotoMono 12/font = NotoMono 14/' "$HOME/dotfiles/termite_config"
 #sed -i 's/URxvt.font: xft:monospace:size=12/URxvt.font: xft:monospace:size=14/' "$HOME/dotfiles/Xresources"
 
 # Wallpaper gets messed up when running above command, so this fixes it and sets a different background for each monitor
@@ -13,5 +15,5 @@ sed -i 's/font = NotoMono 12/font = NotoMono 14/' "$HOME/dotfiles/termite_config
 
 # choose random wallpapers instead of predestined ones as in command above
 #sh $HOME/.bash_scripts/random_wallpaper_colorscheme.sh
-sh /home/darren/.bash_scripts/randomize_terminal_colorscheme.sh
-wal -i "$HOME/Pictures/Desktop_Wallpaper/Christ_and_Buddha.jpg" -t
+#sh /home/darren/.bash_scripts/randomize_terminal_colorscheme.sh
+wal -i "$HOME/Pictures/Desktop_Wallpaper/stone-arch.jpg" -t
